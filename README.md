@@ -98,12 +98,12 @@ Prerequiremnts:
 - Node v18.18, v23.3
 - nvm 
 - pnpm 
-- yarn
+- yarn (optional)
 - Typescript
 
 
 
-1)
+1) Clone the Repo
 ```bash
 git clone git@github.com:Xtreamly-Team/looptrader_agent_DEMO.git
 
@@ -115,7 +115,7 @@ cd looptrader_agent_DEMO
 cd xtr_defi_backend
 ```
 
-3)
+3) Setup the xtr_defi_backend
 
 ```bash 
 nvm use
@@ -134,16 +134,55 @@ pnpm dev
 
 4)
 
-```bash
+Wait until the express server boots and starts logging the api volatitlity response from the xtr_AI models
 
-```
-
-5)
+5) Install the xtr_trader dependency for customizing your trading logic
 
 ```bash
 
 pnpm add git+ssh://git@github.com:Xtreamly-Team/xtreamly-trader
 
-
+# Define and extend src/scripts/xtrTraderPolicy.ts with xtreamly-trader package. 
 
 ```
+
+6) Setup 
+
+```bash
+
+cd loopTraderAgent
+
+git checkout $(git describe --tags --abbrev=0)
+
+nvm use
+
+pnpm install 
+
+pnpm install --include=optional sharp
+
+cp .env.example .env
+
+# Enter your OpenAI API Key in .env
+OPENAI_API_KEY=sk.....
+
+```
+
+7) Download and add `loopTraderAgent.json` to /characters
+
+8) 
+
+```bash
+
+pnpm build
+
+pnpm run dev --characters="characters/loopTraderAgent.json"
+
+```
+
+9) Go to the Terminal with `pnpm dev`running in `xtr_defi_backend``
+There you can see: 
+
+- Incoming predictions
+- Agent responses on the predictions
+- on-chain execution & txn receipts
+

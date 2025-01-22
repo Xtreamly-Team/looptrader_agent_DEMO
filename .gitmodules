@@ -1,3 +1,4 @@
 [submodule "loopTraderAgent"]
 	path = loopTraderAgent
 	url = https://github.com/elizaOS/eliza.git
+

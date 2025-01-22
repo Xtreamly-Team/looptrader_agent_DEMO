@@ -93,10 +93,46 @@ flowchart TD
 
 ## Quick Start (WIP)
 
+Prerequiremnts: 
+
+- Node v18.18, 23.3
+- nvm 
+- pnpm 
+- Typescript
+
+
+
 1)
 ```bash
 git clone git@github.com:Xtreamly-Team/looptrader_agent_DEMO.git
 ```
 
 2)
+```bash 
+cd xtr_defi_backend
+```
 
+3)
+
+```bash 
+nvm use
+
+cp .env.example .env
+
+# Fill .env 
+PRIVATE_KEY=0x56...
+ARBITRUM_RPC_MAINNET_RPC=...
+ARBITRUM_SEPOLIA_RPC=...
+
+pnpm install
+
+pnpm dev
+```
+
+4)
+
+```bash
+cd ../xtr_trader
+```
+
+5) 

@@ -95,9 +95,10 @@ flowchart TD
 
 Prerequiremnts: 
 
-- Node v18.18, 23.3
+- Node v18.18, v23.3
 - nvm 
 - pnpm 
+- yarn
 - Typescript
 
 
@@ -105,6 +106,8 @@ Prerequiremnts:
 1)
 ```bash
 git clone git@github.com:Xtreamly-Team/looptrader_agent_DEMO.git
+
+cd looptrader_agent_DEMO
 ```
 
 2)
@@ -132,7 +135,15 @@ pnpm dev
 4)
 
 ```bash
-cd ../xtr_trader
+
 ```
 
-5) 
+5)
+
+```bash
+
+pnpm add git+ssh://git@github.com:Xtreamly-Team/xtreamly-trader
+
+
+
+```
